@@ -1,0 +1,24 @@
+{
+  "name": "game",
+  "version": "2.0.0",
+  "private": true,
+  "description": "lishogi.org game",
+  "main": "game.js",
+  "keywords": [
+    "chess",
+    "lishogi",
+    "play",
+    "replay"
+  ],
+  "author": "Thibault Duplessis",
+  "license": "AGPL-3.0-or-later",
+  "scripts": {
+    "compile": "../../node_modules/typescript/bin/tsc --incremental",
+    "dev": "yarn run compile",
+    "prod": "yarn run compile"
+  },
+  "devDependencies": {
+    "@types/lishogi": "2.0.0",
+    "typescript": "^3"
+  }
+}

@@ -1,0 +1,64 @@
+@import "pool";
+@import "hook-chart";
+@import "hook-list";
+
+.lobby__app {
+  @extend %flex-column;
+  @include lobby-app-size;
+  user-select: none;
+
+  .lobby-nope & {
+    display: none;
+  }
+
+  &__content {
+    @extend %box-neat;
+    flex: 1 1 100%;
+    position: relative;
+    @if $theme == "transp" {
+      background: fade-out($c-bg-box, 0.2);
+    } @else {
+      $logo-color: "dadada";
+      @if $theme-dark {
+        $logo-color: "383633";
+      }
+      background: $c-bg-box
+        url("data:image/svg+xml,%3Csvg viewBox='-2 -2 54 54' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23#{$logo-color}' stroke='%23#{$logo-color}' stroke-linejoin='round'%0Atransform='matrix(0.83769177,-0.01116274,0.01395684,0.7948078,7.5072348,6.1385516)' id='path834' d='M 21.695312 -1.6699219 L 21.275391 -1.5234375 L 6.9863281 3.4550781 L 0.32226562 50.433594 L 42.763672 50.9375 L 36.314453 3.6289062 L 21.695312 -1.6699219 z M 21.675781 0.98242188 L 34.041016 5.4648438 L 39.896484 48.402344 L 3.1972656 47.96875 L 9.2480469 5.3144531 L 21.675781 0.98242188 z'/%3E%3C/svg%3E%0A");
+    }
+    background-size: 100% 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .lredir {
+    background: $c-bg-box;
+    display: flex;
+    .spinner {
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  .toggle {
+    position: absolute;
+    padding: 0.6em;
+    cursor: pointer;
+    z-index: 2;
+    font-size: 1.3em;
+    &.toggle-filter {
+      right: 0;
+    }
+    @include transition();
+    &:hover {
+      color: $c-accent;
+    }
+  }
+
+  .gamesFiltered {
+    color: $c-accent;
+    @include transition();
+    &:hover {
+      color: $c-accent-dim;
+    }
+  }
+}

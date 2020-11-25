@@ -1,0 +1,32 @@
+{
+  "name": "ceval",
+  "version": "2.0.0",
+  "private": true,
+  "description": "lishogi.org local computer analysis",
+  "main": "dist/src/main.js",
+  "types": "dist/src/main",
+  "keywords": [
+    "chess",
+    "lishogi",
+    "play",
+    "replay"
+  ],
+  "author": "Thibault Duplessis",
+  "license": "AGPL-3.0-or-later",
+  "scripts": {
+    "compile": "../../node_modules/typescript/bin/tsc --incremental",
+    "dev": "yarn run compile",
+    "prod": "yarn run compile"
+  },
+  "devDependencies": {
+    "@types/defer-promise": "1.0.0",
+    "@types/jquery": "^2.0",
+    "@types/lishogi": "2.0.0",
+    "typescript": "^3"
+  },
+  "dependencies": {
+    "common": "2.0.0",
+    "shogiutil": "1.0.0",
+    "snabbdom": "^0.7.4"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "round",
+  "version": "2.0.0",
+  "private": true,
+  "description": "lishogi.org round",
+  "keywords": [
+    "chess",
+    "lishogi",
+    "play",
+    "replay"
+  ],
+  "author": "Thibault Duplessis",
+  "license": "AGPL-3.0-or-later",
+  "devDependencies": {
+    "@build/rollupProject": "2.0.0",
+    "@types/lishogi": "2.0.0"
+  },
+  "dependencies": {
+    "chat": "2.0.0",
+    "common": "2.0.0",
+    "game": "2.0.0",
+    "nvui": "2.0.0",
+    "snabbdom": "^0.7.4",
+    "shogiground": "7.8.1",
+    "shogiutil": "1.0.0"
+  },
+  "scripts": {
+    "dev": "rollup --config",
+    "prod": "rollup --config --config-prod && rollup --config --config-prod --config-plugin nvui && rollup --config --config-prod --config-plugin keyboardMove"
+  }
+}

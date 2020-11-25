@@ -1,0 +1,117 @@
+#dasher_app .theme {
+  .list {
+    @extend %flex-wrap;
+    margin: 5px 0;
+  }
+  .list a {
+    flex: 0 0 50%;
+    height: 44px;
+    @extend %flex-center;
+    justify-content: center;
+  }
+  .list span {
+    display: block;
+    width: 64px;
+    height: 32px;
+  }
+  &.d3 .list span {
+    width: 66px;
+    height: 30px;
+    @include transition(transform);
+  }
+  .list a:hover {
+    filter: brightness(1.05);
+  }
+  .list a:hover span {
+    transform: scale(1.05);
+  }
+  .list a.active {
+    background-color: $c-shade;
+  }
+  &.d2 {
+    .solid-natural {
+      background-image: url(../images/board/solid-natural_Thumbnail.png);
+    }
+    .solid-brown1 {
+      background-image: url(../images/board/svg/solid-brown1.svg);
+      background-size: 290px;
+    }
+    .blue {
+      background-image: url(../images/board/svg/blue.svg);
+      background-size: 290px;
+    }
+    .dark-blue {
+      background-image: url(../images/board/svg/db.svg);
+      background-size: 290px;
+    }
+    .brown {
+      background-image: url(../images/board/svg/brown.svg);
+      background-size: 290px;
+    }
+    .space1 {
+      background-image: url(../images/board/space1_Thumbnail.png);
+    }
+    .space2 {
+      background-image: url(../images/board/space2_Thumbnail.png);
+    }
+    .solid-wood1 {
+      background-image: url(../images/board/thumnail1-solid-wood-1.png);
+    }
+    .doubutsu {
+      background-image: url(../images/board/doubutsu_thumbnail.png);
+    }
+    .kaya1 {
+      background-image: url(../images/board/kaya1_Thumbnail.png);
+    }
+    .kaya2 {
+      background-image: url(../images/board/kaya2_Thumbnail.png);
+    }
+    .Kinkaku {
+      background-image: url(../images/board/Kinkaku_Thumbnail.png);
+    }
+    .oak {
+      background-image: url(../images/board/oak_Thumbnail.png);
+    }
+    .Painting1 {
+      background-image: url(../images/board/Painting1_Thumbnail.png);
+    }
+    .Painting2 {
+      background-image: url(../images/board/Painting2_Thumbnail.png);
+    }
+    .whiteBoard {
+      background-image: url(../images/board/white_Thumbnail.png);
+    }
+    .darkBoard {
+      background-image: url(../images/board/dark_Thumbnail.png);
+    }
+  }
+  &.d3 {
+    $board-files: (
+      "Black-White-Aluminium",
+      "Brushed-Aluminium",
+      "China-Blue",
+      "China-Green",
+      "China-Grey",
+      "China-Scarlet",
+      "China-Yellow",
+      "Classic-Blue",
+      "Transparent-Glass",
+      "Gold-Silver",
+      "Green-Glass",
+      "Light-Wood",
+      "Power-Coated",
+      "Purple-Black",
+      "Rosewood",
+      "Wood-Glass",
+      "Wax",
+      "Jade",
+      "Marble",
+      "Woodi"
+    );
+    @each $name in $board-files {
+      .#{$name} {
+        background-image: img-url("staunton/board/#{$name}.thumbnail.png");
+      }
+    }
+  }
+}

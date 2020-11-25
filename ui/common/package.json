@@ -1,0 +1,25 @@
+{
+  "name": "common",
+  "version": "2.0.0",
+  "private": true,
+  "description": "lishogi.org common utils",
+  "main": "common.js",
+  "keywords": [
+    "chess",
+    "lishogi"
+  ],
+  "author": "Thibault Duplessis",
+  "license": "AGPL-3.0-or-later",
+  "scripts": {
+    "compile": "../../node_modules/typescript/bin/tsc --incremental",
+    "dev": "yarn run compile",
+    "prod": "yarn run compile"
+  },
+  "devDependencies": {
+    "@types/lishogi": "2.0.0",
+    "typescript": "^3"
+  },
+  "dependencies": {
+    "shogiground": "7.8.1"
+  }
+}

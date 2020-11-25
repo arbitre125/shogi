@@ -1,0 +1,27 @@
+{
+  "name": "editor",
+  "version": "2.0.0",
+  "private": true,
+  "description": "lishogi.org board editor",
+  "keywords": [
+    "chess",
+    "lishogi.org",
+    "board",
+    "editor"
+  ],
+  "author": "Thibault Duplessis",
+  "license": "AGPL-3.0-or-later",
+  "devDependencies": {
+    "@build/rollupProject": "2.0.0"
+  },
+  "dependencies": {
+    "common": "2.0.0",
+    "snabbdom": "^0.7.4",
+    "shogiground": "7.8.1",
+    "shogiutil": "1.0.0"
+  },
+  "scripts": {
+    "dev": "rollup --config",
+    "prod": "rollup --config --config-prod"
+  }
+}
